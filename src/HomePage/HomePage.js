@@ -1,82 +1,36 @@
-import React, { useEffect, useState } from "react";
-import "./HomePage.scss";
-import FilterName from "../FilterNames/FilterName";
-import PallindromeCode from "./PallindromeCode";
-import { Row, Col, Button, Nav, NavItem } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Row, Col, Button, Nav, Image } from 'react-bootstrap';
+import './HomePage.scss';
+import Map from '../Map/Map';
 
 const HomePage = (props) => {
-  useEffect(() => {
-    console.log("hello");
-    //api
-    //error
-    // setInterval(() => {
-    //     alert('setInterval example');
-    // },6000);
-    // setTimeout(() => {
-    //     alert('Logged out');
-    // },7000);
-  });
-  // var x = 10;
-  const [name, setName] = useState(props.name);
-  let [childData, setChildData] = useState("Mitul");
-
-  setChildData = (dataFromChild) => {
-    console.log(dataFromChild);
-  };
+  const [title, setTitle] = useState(props.title);
+  const [content, setContent] = useState('');
   return (
-    <div>
-      <img
-        src="../assets/nature-images.jpg"
-        alt="nature"
-        className="nature-img"
-      />
-      <Nav
-        fill
-        variant="pills"
-        onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-      >
-        <Nav.Item>
-          <Nav.Link href="/app">Home</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/about">About Us</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/filterName">Names</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-1">Careers</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-2">Support</Nav.Link>
-        </Nav.Item>
-      </Nav>
-      <Row className="title-block">
-        <Col>
-          {name}
-          <div className="justify-content-start">
-            <Button
-              onClick={() => setName("Title reset")}
-              variant="outline-success"
-            >
-              Click me to reset the title!
-            </Button>
-          </div>
-          <p> Javascript is a
-          <a href="#" data-text="Code is not precompiled instead it is evaluated,compiled and executed at runtime" className="info-modal"> weekly typed </a>
-          programming language
-          </p>
-        </Col>
-        {/* <Col>
-          <FilterName sendData={() => setChildData()} />
-        </Col> */}
-        <Col>
-          <PallindromeCode />
-          {/* {childData} */}
+    <>
+    
+      <p className='title-name'> {title}</p>
+      <Button
+            onClick={() => setTitle('Title reset')}
+            variant='outline-success'
+            className='title-btn'
+          >
+            Click here to reset the title!
+          </Button>
+      <Row className='title-block'>
+        <Col >
+          <Image
+            src='../assets/nature-images.jpg'
+            alt='nature'
+            className='nature-img'
+          />
+          
         </Col>
       </Row>
-    </div>
+      <Map setTooltipContent={setContent}/>
+    </>
   );
+
 };
 
 export default HomePage;

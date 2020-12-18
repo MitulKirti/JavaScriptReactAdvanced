@@ -1,14 +1,22 @@
+@import '../index.scss';
+
 .nature-img{
-    height: 10% ;
-    width: 10% ;
-    float: left;
+    width: 10%;
+    height: auto;
+    max-width: 100%;
+    margin: 1%;
 }
 .title-name{
     display: inline;
+    color: $base-color;
+    margin-left: 1%;
 }
 .clearfix{
     overflow: auto;
 }
-.title-block{
-    
+.nav-bar{
+    margin-left: 10%;
+}
+.nav{
+    color: $base-color;
 }

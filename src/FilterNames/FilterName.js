@@ -1,27 +1,27 @@
-import React from "react";
-import { Button } from "react-bootstrap";
+import React from 'react';
+import { Row, Col } from 'react-bootstrap';
 
-const names = ["Mitul", "Kirti", "Mk", "Mitali", "Michel"];
+const names = ['Mitul', 'Kirti', 'Mk', 'Mitali', 'Michel'];
 let namesList = [1, 2, 6, 7, 9];
 const people = [
   {
-    name: "James",
+    name: 'James',
     age: 61,
   },
   {
-    name: "John",
+    name: 'John',
     age: 45,
   },
   {
-    name: "Paul",
+    name: 'Paul',
     age: 65,
   },
   {
-    name: "Ringo",
+    name: 'Ringo',
     age: 49,
   },
   {
-    name: "George",
+    name: 'George',
     age: 34,
   },
 ];
@@ -29,72 +29,89 @@ const scores = [100, 200, 300, 400, 500];
 
 const FilterName = (props) => {
   const changeName = () => {
-    props.sendData("Mitul Kirti");
+    props.sendData('Mitul Kirti');
     console.log(props.sendData());
   };
 
   const handleChange = (evt) => {
-    console.log("called handle");
-    let userInput = document.getElementById("todoInput").value;
-    document.getElementById("displayList").textContent = userInput;
+    let userInput = document.getElementById('todoInput').value;
+    document.getElementById('displayList').textContent = userInput;
     return <div>{userInput}</div>;
   };
 
   return (
-    <div className="name-list">
-      {/* Program to display names list normally */}
-      <strong>Display list</strong>
-      {names.map((nameIndividual) => {
-        return <li>{nameIndividual}</li>;
-      })}
-      {/* Program to display names object normally */}
+    <div className='name-list'>
+      <Row>
+        {/* Program to display names list normally */}
+        <strong>Display list</strong>
+        <Col>
+          {names.map((nameIndividual) => {
+            return <li>{nameIndividual}</li>;
+          })}
+        </Col>
+      </Row>
+      {/* Program to display names object normally
       <strong>Display object</strong>
       {people.map((peo) => (
         <>
           <li>{peo.name}</li>
           <li>{peo.age}</li>
         </>
-      ))}
-      {/* Program to filter out the names from the names list starting with 'Mi' */}
-      <strong>Names starting with 'Mi'</strong>
-      {names
-        .filter((name) => name.includes("Mi"))
-        .map((filteredName) => (
-          <li key={filteredName}>{filteredName}</li>
-        ))}
-      <strong>Numbers greater than 5</strong>
-      {namesList
-        .filter((nm) => nm > 5)
-        .map((filternume) => (
-          <li key={filternume}>{filternume}</li>
-        ))}
-        
-      {/* Program to filter out the names from the names list having more than 60yrs of age */}
-      <strong>People above 60 years of age </strong>
-      {people
-        .filter((person) => person.age > 60)
-        .map((oldAge) => (
-          <li key={oldAge}>{oldAge.name}</li>
-        ))}
-      {/* Program to use reduce function */}
-      <p>
-        {scores.reduce(
-          (previousScore, currentScore) => previousScore + currentScore,
-          0
-        )}
-      </p>
-      {/* Program to display the value entered in an input tag */}
-      <input
-        id="todoInput"
-        onChange={(evt) => {
-          console.log(evt.target.value);
-          handleChange();
-        }}
-      />
-
-      <div id="displayList"></div>
-      <br />
-      <Button onClick={() => changeName()}>Click</Button>
+      ))} */}
+      <Row>
+        {/* Program to filter out the names from the names list starting with 'Mi' */}
+        <strong>Names starting with 'Mi' :</strong>
+        <Col>
+          {names
+            .filter((name) => name.includes('Mi'))
+            .map((filteredName) => (
+              <li key={filteredName}> {filteredName}</li>
+            ))}
+        </Col>
+      </Row>
+      <Row>
+        <strong>Numbers greater than 5 :</strong>
+        <Col>
+          {namesList
+            .filter((nm) => nm > 5)
+            .map((filternume) => (
+              <li key={filternume}> {filternume}</li>
+            ))}
+        </Col>
+      </Row>
+      <Row>
+        {/* Program to filter out the names from the names list having more than 60yrs of age */}
+        <strong>People above 60 years of age :</strong>
+        <Col>
+          {people
+            .filter((person) => person.age > 60)
+            .map((oldAge) => (
+              <li key={oldAge}> {oldAge.name}</li>
+            ))}
+        </Col>
+      </Row>
+      <Row>
+        {/* Program to use reduce function */}
+        <strong>
+          Program to use reduce function :
+          <Col>
+            {scores.reduce(
+              (previousScore, currentScore) => previousScore + currentScore,
+              0
+            )}
+          </Col>
+        </strong>
+      </Row>
+      <Row>
+        {/* Program to display the value entered in an input tag */}
+        <input
+          id='todoInput'
+          onChange={(evt) => {
+            handleChange();
+          }}
+        />
+      </Row>
+      <div id='displayList'></div>
     </div>
   );
 };

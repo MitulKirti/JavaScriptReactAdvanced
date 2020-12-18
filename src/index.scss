@@ -12,18 +12,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.App-header{
-  background-color:violet;
-  width: 10%;
-  display: flex;
-  justify-content: left;
-  text-align: left;
-  padding-right: 3%;
-}
+$base-color: #9FCD21 ;
 .clearfix{
   overflow: auto;
 }
 .name-list{
   display: list-item;
   padding: 4% 0% 0% 11%;
+}
+.title-btn{
+  margin-left: 1%;
+  color: $base-color;
+}
+.title-btn:hover{
+  color: #FFFFFF;
+  background-color: $base-color;
+  border-color: $base-color;
 }
