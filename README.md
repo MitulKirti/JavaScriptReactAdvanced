@@ -25,11 +25,11 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-### `This POC is created from a learning purpose. We are exploring advanced concepts of JavaScript in this React Application`
+### This POC is created from a learning purpose. We are exploring advanced concepts of JavaScript in this React Application
 
-### `When you run this app you will land on to a default page. By using React Router concept and with the help of Navigation Items you can explore the various features captured in this app.`
-### `Home Page : Contains an example of basic dynamic binding and react-simple-maps implementation`
-### `About Page : Contains an example of Lazy Loading and the concept of Suspense and fallback using a dummy data set`
-### `Names : Contains an example of filter,bind and apply concepts of JS`
-### `User Details : Contains an example of axios for calling an API`
-### `Context : Contains an example of a very important concept in React called context`
+### When you run this app you will land on to a default page. By using React Router concept and with the help of Navigation Items you can explore the various features captured in this app.
+### Home Page : Contains an example of basic dynamic binding and react-simple-maps implementation
+### About Page : Contains an example of Lazy Loading and the concept of Suspense and fallback using a dummy data set
+### Names : Contains an example of filter,bind and apply concepts of JS
+### User Details : Contains an example of axios for calling an API
+### Context : Contains an example of a very important concept in React called context
