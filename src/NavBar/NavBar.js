@@ -1,8 +1,16 @@
 import React from 'react';
-import {Nav } from 'react-bootstrap';
+import {Row, Nav, Image} from 'react-bootstrap';
+import './NavBar.scss';
 
-const NavBar = () => {
+const NavBar = (props) => {
     return (
+      <>
+      <Row>
+          <Image
+            src='../assets/nature-images.jpg'
+            alt='nature'
+            className='nature-img'
+          />
         <Nav
         fill
         variant='pills'
@@ -25,6 +33,11 @@ const NavBar = () => {
           <Nav.Link href='/context'>Context</Nav.Link>
         </Nav.Item>
       </Nav>
+      </Row>
+      <Row>
+      <strong className='title-intro'>{props.title}</strong>
+      </Row>
+      </>
     );
 }
 export default NavBar;

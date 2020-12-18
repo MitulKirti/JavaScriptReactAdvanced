@@ -1,0 +1,26 @@
+@import '../index.scss';
+
+.title-intro{
+    color: rgb(0, 151, 169);
+    margin: 2%;
+}
+.nav-bar{
+    margin-left: 10%;
+    width: 74%;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0.25rem;
+    background-color: $base-color;
+    color: white;
+    margin-right:5%;
+}
+.nav-item>a:hover { 
+    color: black; 
+} 
+
+/*code to change background color*/ 
+.nav-item>.active>a { 
+    background-color: #C0C0C0; 
+    color: black; 
+} 

@@ -1,18 +1,13 @@
 import React, { Suspense } from "react";
-import ReactDOM from "react-dom";
 import { fetchProfileData } from "./fakeAPI";
 
 const resource = fetchProfileData();
 
 export default function ProfilePage() {
   return (
-    <Suspense
-      fallback={<h1>Loading profile...</h1>}
-    >
+    <Suspense fallback={<h1>Loading profile...</h1>}>
       <ProfileDetails />
-      <Suspense
-        fallback={<h1>Loading information...</h1>}
-      >
+      <Suspense fallback={<h1>Loading information...</h1>}>
         <ProfileTimeline />
       </Suspense>
     </Suspense>
@@ -30,10 +25,9 @@ function ProfileTimeline() {
   const posts = resource.posts.read();
   return (
     <ul>
-      {posts.map(post => (
+      {posts.map((post) => (
         <li key={post.id}>{post.text}</li>
       ))}
     </ul>
   );
 }
-
