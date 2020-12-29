@@ -1,13 +1,14 @@
 import React from 'react';
 import {Row, Nav, Image} from 'react-bootstrap';
 import './NavBar.scss';
+import nature from '../assets/nature.jpg';
 
 const NavBar = (props) => {
     return (
       <>
       <Row>
           <Image
-            src='../assets/nature-images.jpg'
+            src={nature}
             alt='nature'
             className='nature-img'
           />
@@ -15,7 +16,7 @@ const NavBar = (props) => {
         fill
         variant='pills'
         className='nav-bar'
-        onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+        onSelect={(selectedKey) => console.log(`selected ${selectedKey}`)}
       >
         <Nav.Item>
           <Nav.Link href='/app'>Home</Nav.Link>
