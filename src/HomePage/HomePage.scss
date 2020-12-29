@@ -14,3 +14,10 @@
 .clearfix{
     overflow: auto;
 }
+//If I want to use different images for different screen sizes
+// @media all and (min-width: 501px) {
+//     .nature-img {background-image:url('../assets/nature-images.jpg');width:200px;height:75px;}
+// }
+// @media all and (max-width: 500px) {
+//     #nature-img {background-image:url('../assets/nature-images.jpg');width:200px;height:75px;}
+// }

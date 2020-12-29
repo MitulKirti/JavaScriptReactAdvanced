@@ -6,6 +6,7 @@ import Map from "../Map/Map";
 const HomePage = (props) => {
   const [heading, setHeading] = useState(props.heading);
   const [content, setContent] = useState("");
+
   return (
     <>
       <p className="title-name"> {heading}</p>
@@ -16,7 +17,10 @@ const HomePage = (props) => {
       >
         Click here to reset the title!
       </Button>
-      <article className="title-name"> Calling Map Component from Home Component to display a react-simple-map below:</article>
+      <article className="title-name">
+        Calling Map Component from Home Component to display a react-simple-map
+        below:
+      </article>
       <Map setTooltipContent={setContent} />
     </>
   );

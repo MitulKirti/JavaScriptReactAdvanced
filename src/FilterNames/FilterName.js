@@ -28,15 +28,41 @@ const people = [
 ];
 const scores = [100, 200, 300, 400, 500];
 
+let str = ['Apple', 'Orange', 'Plan', 'Python', 'Money'];
+//from this array you need to extract the values that contains at least 2 vowels
+let vowelArr = ['a','e','i','o','u'];
+
 const FilterName = (props) => {
   const handleChange = (evt) => {
     let userInput = document.getElementById("todoInput").value;
     document.getElementById("displayList").textContent = userInput;
     return <div>{userInput}</div>;
   };
+  const vowelsCounter = (strVal) => {
+    // Search text with Regex and store all matching instances 
+    let matchingInstances = strVal.match(/[aeiou]/gi);
+    // Check if matching instances exist then calculate length
+    if (matchingInstances.split(',').length == 2) {    
+        // Return number of vowels
+        return strVal;
+    } else {
+        return 0
+    }
+  }
 
   return (
     <div className="name-list">
+      <Row>
+      {/* {vowelsCounter(str.toString())} */}
+      {str.filter((name) => name.includes(name.match(/[aeiou]/gi)))
+      .map((nameIndividual) => {
+            return (
+              <>
+            <li> {nameIndividual} </li>
+            </>
+            )
+          })}
+      </Row>
       <Row>
         {/* Program to display names list normally */}
         <strong>Display list</strong>
