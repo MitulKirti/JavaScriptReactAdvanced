@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/JavaScriptReactAdvanced/static/css/main.c20f30ee.chunk.css",
-    "main.js": "/JavaScriptReactAdvanced/static/js/main.79e0d2e3.chunk.js",
-    "main.js.map": "/JavaScriptReactAdvanced/static/js/main.79e0d2e3.chunk.js.map",
+    "main.js": "/JavaScriptReactAdvanced/static/js/main.c4d009d0.chunk.js",
+    "main.js.map": "/JavaScriptReactAdvanced/static/js/main.c4d009d0.chunk.js.map",
     "runtime-main.js": "/JavaScriptReactAdvanced/static/js/runtime-main.932f861e.js",
     "runtime-main.js.map": "/JavaScriptReactAdvanced/static/js/runtime-main.932f861e.js.map",
     "static/js/2.c06e8877.chunk.js": "/JavaScriptReactAdvanced/static/js/2.c06e8877.chunk.js",
     "static/js/2.c06e8877.chunk.js.map": "/JavaScriptReactAdvanced/static/js/2.c06e8877.chunk.js.map",
     "index.html": "/JavaScriptReactAdvanced/index.html",
-    "precache-manifest.5ca81363a5ec9b63a4a63900b6e3ae94.js": "/JavaScriptReactAdvanced/precache-manifest.5ca81363a5ec9b63a4a63900b6e3ae94.js",
+    "precache-manifest.27d74edc496fd03e5488e8d70fa331e8.js": "/JavaScriptReactAdvanced/precache-manifest.27d74edc496fd03e5488e8d70fa331e8.js",
     "service-worker.js": "/JavaScriptReactAdvanced/service-worker.js",
     "static/css/main.c20f30ee.chunk.css.map": "/JavaScriptReactAdvanced/static/css/main.c20f30ee.chunk.css.map",
     "static/js/2.c06e8877.chunk.js.LICENSE.txt": "/JavaScriptReactAdvanced/static/js/2.c06e8877.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.932f861e.js",
     "static/js/2.c06e8877.chunk.js",
     "static/css/main.c20f30ee.chunk.css",
-    "static/js/main.79e0d2e3.chunk.js"
+    "static/js/main.c4d009d0.chunk.js"
   ]
 }
