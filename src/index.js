@@ -14,7 +14,7 @@ ReactDOM.render(
   <BrowserRouter>
     <div className='App'>
       <Route path='/' component={NavBar} component={() => <NavBar title="Welcome to Mitul's ReactJS Tutorial.Click on the links above to see a demo."/>}/>
-      <Route path='/app' component={HomePage}  component={() => <HomePage heading='Go Green' />}/>
+      <Route path='/home' component={HomePage}  component={() => <HomePage heading='Go Green' />}/>
         <Route path='/about' component={AboutUs} />
         <Route path='/filterName' component={FilterName} />
         <Route path='/userDetail' component={UserDetail} />

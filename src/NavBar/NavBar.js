@@ -19,7 +19,7 @@ const NavBar = (props) => {
         onSelect={(selectedKey) => console.log(`selected ${selectedKey}`)}
       >
         <Nav.Item>
-          <Nav.Link href='/app'>Home</Nav.Link>
+          <Nav.Link href='/home'>Home</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href='/about'>About</Nav.Link>
