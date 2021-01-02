@@ -21,7 +21,7 @@ const HomePage = (props) => {
         Calling Map Component from Home Component to display a react-simple-map
         below:
       </article>
-      <Map setTooltipContent={setContent} />
+      <Map content={content} setTooltipContent={setContent} />
     </>
   );
 };

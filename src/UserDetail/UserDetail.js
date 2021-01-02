@@ -25,8 +25,8 @@ const UserDetail = () => {
     <>
       <p className="title-name">
         Calling an API to display random data on the UI.
-      </p>
-      <pre>{userDetailsJSON}</pre>
+      </p><br/>
+      {userDetailsJSON}
     </>
   );
 };
