@@ -1,28 +1,28 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
-import "../index.scss";
+import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+import '../index.scss';
 
-const names = ["Mitul", "Kirti", "Mk", "Mitali", "Michel"];
+const names = ['Mitul', 'Kirti', 'Mk', 'Mitali', 'Michel'];
 let namesList = [1, 2, 6, 7, 9];
 const people = [
   {
-    name: "James",
+    name: 'James',
     age: 61,
   },
   {
-    name: "John",
+    name: 'John',
     age: 45,
   },
   {
-    name: "Paul",
+    name: 'Paul',
     age: 65,
   },
   {
-    name: "Ringo",
+    name: 'Ringo',
     age: 49,
   },
   {
-    name: "George",
+    name: 'George',
     age: 34,
   },
 ];
@@ -34,8 +34,8 @@ const scores = [100, 200, 300, 400, 500];
 
 const FilterName = (props) => {
   const handleChange = (evt) => {
-    let userInput = document.getElementById("todoInput").value;
-    document.getElementById("displayList").textContent = userInput;
+    let userInput = document.getElementById('todoInput').value;
+    document.getElementById('displayList').textContent = userInput;
     return <div>{userInput}</div>;
   };
   // const vowelsCounter = (strVal) => {
@@ -51,7 +51,7 @@ const FilterName = (props) => {
   // }
 
   return (
-    <div className="name-list">
+    <div className='name-list'>
       {/* <Row>
       {str.filter((name) => name.includes(name.match(/[aeiou]/gi)))
       .map((nameIndividual) => {
@@ -84,7 +84,7 @@ const FilterName = (props) => {
         <strong>Names starting with 'Mi' :</strong>
         <Col>
           {names
-            .filter((name) => name.includes("Mi"))
+            .filter((name) => name.includes('Mi'))
             .map((filteredName) => (
               <li key={filteredName}> {filteredName}</li>
             ))}
@@ -126,15 +126,15 @@ const FilterName = (props) => {
       <Row>
         {/* Program to display the value entered in an input tag */}
         <input
-          id="todoInput"
-          placeholder="Type a text"
-          className="text-box-filter-component"
+          id='todoInput'
+          placeholder='Type a text'
+          className='text-box-filter-component'
           onChange={(evt) => {
             handleChange();
           }}
         />
       </Row>
-      <div id="displayList"></div>
+      <div id='displayList'></div>
       <br />
     </div>
   );
